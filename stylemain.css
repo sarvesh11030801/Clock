@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(65, 65, 65);
+}
+
+.container{
+    position: relative;
+    /* min-height: 500px; */
+    border-radius: 20px;
+    border-top-left-radius: 225px;
+    border-top-right-radius: 225px;
+    box-shadow: 5px 25px 75px solid rgba(0,0,0,0.75),
+    10px 10px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.25),
+    inset 5px 5px 20px rgba(0,0,0,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgb(138, 138, 138);
+    border: 2px solid rgb(253, 236, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(0,0,0,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 18px;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid white;
+    z-index: 2;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i1{
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: 70px;
+    border-radius: 8px;
+}
+
+.hand i2{
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.hand i3{
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.circle{
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border: 2px solid rgb(126, 126, 126);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.circle2{
+    width: 180px;
+    height: 180px;
+    z-index: 9;
+}
+
+.circle3{
+    width: 120px;
+    height: 120px;
+    z-index: 8;
+}
